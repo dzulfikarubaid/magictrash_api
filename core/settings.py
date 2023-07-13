@@ -72,17 +72,21 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.app'
 
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'neondb',
+    'USER': 'sezerotech',
+    'PASSWORD': 'lizdgJpv8xc2',
+    'HOST': 'ep-dawn-firefly-123096.ap-southeast-1.aws.neon.tech',
+    'PORT': '5432',
+  }
 }
 
 
