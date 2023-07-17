@@ -33,6 +33,8 @@ urlpatterns = [
     path('list/', rec_list, name='rec_list'),
     path('', include(router.urls)),
     path('<int:pk>/', post_list, name='post_list'),
+
+    path('api/AIchat/', views.AIchat),
     
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
