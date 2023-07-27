@@ -50,9 +50,15 @@ class Jual(models.Model):
     alasan = models.TextField()
     foto_barang = models.TextField()
 
+    def __str__(self):
+        return self.nama_barang
+
 class Donasi(models.Model):
     nama_barang = models.CharField(max_length=30)
     nomor_wa = models.CharField(max_length=30)
     alamat = models.TextField()
     alasan = models.TextField()
     foto_barang = models.TextField()
+
+    def __str__(self):
+        return self.nama_barang
