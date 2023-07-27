@@ -46,7 +46,7 @@ class Jual(models.Model):
     nama_barang = models.CharField(max_length=30)
     nomor_wa = models.CharField(max_length=30)
     alamat = models.TextField()
-    harga = models.IntegerField()
+    harga = models.TextField()
     alasan = models.TextField()
     foto_barang = models.TextField()
 
