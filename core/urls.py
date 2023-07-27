@@ -31,9 +31,10 @@ router.register(r'', views.ProductViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('list/', rec_list, name='rec_list'),
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
     path('<int:pk>/', post_list, name='post_list'),
-
+    path('jual/', views.produk_jual, name='jual'),
+    path('donasi/', views.produk_donasi, name='donasi'),
     path('api/AIchat/', views.AIchat),
     
 ]

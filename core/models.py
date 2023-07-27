@@ -41,3 +41,18 @@ class MessageModel(models.Model):
     id_msg = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30)
     msg = models.TextField()
+
+class Jual(models.Model):
+    nama_barang = models.CharField(max_length=30)
+    nomor_wa = models.CharField(max_length=30)
+    alamat = models.TextField()
+    harga = models.IntegerField()
+    alasan = models.TextField()
+    foto_barang = models.TextField()
+
+class Donasi(models.Model):
+    nama_barang = models.CharField(max_length=30)
+    nomor_wa = models.CharField(max_length=30)
+    alamat = models.TextField()
+    alasan = models.TextField()
+    foto_barang = models.TextField()

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Post
+from .models import Donasi, Jual, Post
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
@@ -22,3 +22,13 @@ class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = MessageModel
         fields = '__all__'  
+
+class JualSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Jual
+        fields = '__all__'
+
+class DonasiSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Donasi
+        fields = '__all__'

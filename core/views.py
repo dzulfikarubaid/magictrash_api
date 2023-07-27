@@ -1,6 +1,6 @@
 from rest_framework.decorators import api_view
 from .models import Post
-from .serializers import PostSerializer
+from .serializers import PostSerializer, JualSerializer, DonasiSerializer
 from rest_framework.response import Response
 from rest_framework import viewsets
 
@@ -19,7 +19,17 @@ class ProductViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all().order_by('id')
     serializer_class = PostSerializer
 
-
+@api_view(['POST'])
+def produk_jual(request):
+    serializer = JualSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    serializer.save()
+    
+@api_view(['POST'])
+def produk_donasi(request):
+    serializer = DonasiSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    serializer.save()
 from .models import AIcamModel, AIchatModel, MessageModel
 from .serializers import AIcamSerializer, AIchatSerializer, MessageSerializer
 from rest_framework.views import APIView
