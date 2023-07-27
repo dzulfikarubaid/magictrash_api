@@ -24,12 +24,15 @@ def produk_jual(request):
     serializer = JualSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     serializer.save()
-    
+    return Response(serializer.data)
+
 @api_view(['POST'])
 def produk_donasi(request):
     serializer = DonasiSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
     serializer.save()
+    return Response(serializer.data)
+
 from .models import AIcamModel, AIchatModel, MessageModel
 from .serializers import AIcamSerializer, AIchatSerializer, MessageSerializer
 from rest_framework.views import APIView
