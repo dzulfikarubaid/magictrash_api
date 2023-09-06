@@ -5,6 +5,7 @@ class Post(models.Model):
     body = models.TextField()
     harga_asli = models.IntegerField()
     harga_diskon = models.IntegerField()
+    alasan=models.TextField(max_length=250)
     image1 = models.TextField(blank=True, default='')
     image2 = models.TextField(blank=True, default='')
     image3 = models.TextField(blank=True, default='')
