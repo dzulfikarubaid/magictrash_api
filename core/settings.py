@@ -83,9 +83,9 @@ DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': 'neondb',
-    'USER': 'sezerotech',
-    'PASSWORD': 'lizdgJpv8xc2',
-    'HOST': 'ep-dawn-firefly-123096.ap-southeast-1.aws.neon.tech',
+    'USER': 'dzulfikarubaid',
+    'PASSWORD': 'Zv9GstS7qkyh',
+    'HOST': 'ep-super-dream-62616353.us-east-2.aws.neon.tech',
     'PORT': '5432',
   }
 }
