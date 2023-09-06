@@ -19,6 +19,7 @@ class DetailsModel(models.Model):
     title=models.CharField(max_length=40)
     desc=models.TextField(max_length=250)
     image=models.CharField(max_length=20)
+    alasan=models.TextField(max_length=250)
     skill1=models.CharField(max_length=20)
     skill2=models.CharField(max_length=20)
     skill3=models.CharField(max_length=20)
